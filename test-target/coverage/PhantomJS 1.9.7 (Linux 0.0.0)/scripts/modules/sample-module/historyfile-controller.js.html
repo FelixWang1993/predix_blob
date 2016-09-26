@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/modules/sample-module/historyfile-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">scripts/modules/sample-module/historyfile-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4.55% <small>(2 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">7.14% <small>(1 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4.55% <small>(2 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">scripts/modules/sample-module/</a> &#187; historyfile-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">define(['angular', './sample-module'], function(angular, sampleModule,dropzone) {
+		    'use strict';
+		    return sampleModule.controller('HistoryFileCtrl', ['$scope','$http', <span class="fstat-no" title="function not covered" >function($scope,$http,$stateParams) {</span>
+<span class="cstat-no" title="statement not covered" >		    	 var updateLatheStatus = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >		    	 	$http.get('/api/blob/v1/blob').success(<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >                    $scope.bimages=data;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.allBimages=data;</span>
+              });
+		    	 };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		    	 setInterval(<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.$apply(updateLatheStatus);</span>
+        },300000);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        updateLatheStatus();</span>
+<span class="cstat-no" title="statement not covered" >        $scope.alertShow=false;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.deleteFile=<span class="fstat-no" title="function not covered" >function(bimage){ </span></span>
+<span class="cstat-no" title="statement not covered" >            if(confirm('comfirm to delete'+bimage+"?")){</span>
+<span class="cstat-no" title="statement not covered" >              var bimageName = bimage.toString(); </span>
+<span class="cstat-no" title="statement not covered" >              bimageName=bimageName.replace(".","@#$");   </span>
+<span class="cstat-no" title="statement not covered" >              $http({</span>
+                 url: '/api/blob/v1/blob/'+bimage,
+                 headers: {'Content-Type':undefined},
+                 method: 'DELETE',
+              }).success( <span class="fstat-no" title="function not covered" >function (){</span>
+<span class="cstat-no" title="statement not covered" >                  angular.forEach($scope.bimages,<span class="fstat-no" title="function not covered" >function(data,index){</span></span>
+<span class="cstat-no" title="statement not covered" >                    if(data.key!=null&amp;&amp;data.key==bimage){</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.bimages.splice(index,1);</span>
+                      }
+              });
+<span class="cstat-no" title="statement not covered" >                alert('Successfully deleted file:' + bimage);</span>
+               }).error( <span class="fstat-no" title="function not covered" >function (){</span>
+<span class="cstat-no" title="statement not covered" >                  alert('Error deleting file: ' + bimage);</span>
+<span class="cstat-no" title="statement not covered" >                  console.log(request.responseText);</span>
+               });
+              }
+            else{
+<span class="cstat-no" title="statement not covered" >              return; </span>
+            }
+            
+        };
+<span class="cstat-no" title="statement not covered" >        $scope.uploadFile=<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >            var file = document.querySelector('input[type=file]').files[0];</span>
+<span class="cstat-no" title="statement not covered" >            var fd = new FormData();</span>
+<span class="cstat-no" title="statement not covered" >            fd.append("file", file, file.name);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >           $http({</span>
+               url: 'api/blob/v1/blob',
+               data: fd,
+               headers: {'Content-Type':undefined},
+               transformRequest: angular.identity,
+               method: 'POST',
+               
+           }).success( <span class="fstat-no" title="function not covered" >function ()</span>
+             {
+<span class="cstat-no" title="statement not covered" >              alert('Successfully uploaded file: ' + file.name);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              $scope.bimages.push({"key":file.name});</span>
+             }).error( <span class="fstat-no" title="function not covered" >function ()</span>
+             {
+<span class="cstat-no" title="statement not covered" >               alert('Error uploading file: ' + file.name);</span>
+<span class="cstat-no" title="statement not covered" >               console.log(request.responseText);</span>
+             });
+        };
+<span class="cstat-no" title="statement not covered" >        $scope.searchFiles=<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >          if($scope.bimages.length&gt;0&amp;&amp;$scope.myValue!=""){</span>
+<span class="cstat-no" title="statement not covered" >              var arrSearchRes=[];</span>
+<span class="cstat-no" title="statement not covered" >              $scope.bimages.forEach(<span class="fstat-no" title="function not covered" >function(data,index,array){</span></span>
+<span class="cstat-no" title="statement not covered" >                  var strFileName=data.key.toString().toLowerCase();</span>
+<span class="cstat-no" title="statement not covered" >                  if(strFileName.indexOf($scope.myValue.toLowerCase())!=-1){</span>
+<span class="cstat-no" title="statement not covered" >                      arrSearchRes.push(array[index]);</span>
+                  }
+              });
+<span class="cstat-no" title="statement not covered" >              if(arrSearchRes.length&gt;0){</span>
+<span class="cstat-no" title="statement not covered" >                $scope.alertShow=false;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.bimages=arrSearchRes;</span>
+              }
+              else{
+<span class="cstat-no" title="statement not covered" >                $scope.alertShow=true;</span>
+              }
+          }
+          else{
+<span class="cstat-no" title="statement not covered" >            $scope.alertShow=false;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.bimages=$scope.allBimages;</span>
+          }
+        };
+        // $scope.searchFiles=function(){
+        //   var searchText=$scope.myValue;
+        //   if(searchText!=""){
+        //     $http({
+        //          url: 'api/blob/v1/blob/'+searchText,
+        //          method: 'GET'
+        //     }).success( function (data)
+        //       { 
+        //         console.log(data)
+        //         if(data.length&gt;0){
+        //           $scope.alertShow=false;
+        //           $scope.bimages=data;
+        //         }
+        //         else{
+        //           $scope.alertShow=true;
+        //         }
+        //       });
+        //   }
+        //   else{
+        //     $scope.$apply(updateLatheStatus);
+        //   }
+        // };
+		  }]);
+		});</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Sep 22 2016 19:55:06 GMT-0700 (PDT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
